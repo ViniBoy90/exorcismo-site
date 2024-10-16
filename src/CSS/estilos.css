@@ -1,0 +1,447 @@
+body{
+    background-color:#282828;
+    color: aliceblue;
+}
+
+.cabecalho{
+    height: 85px;
+    background-color:#0b0b0b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px 0 20px;
+    border-bottom: 1px solid white;
+}
+
+.cabecalho .logo{
+    display: flex;
+    gap: 10px;
+}
+
+.cabecalho .logo .exorcismo{
+    width: 300px;
+}
+
+.cabecalho .logo .sao-bento{
+    width: 85px;
+}
+
+
+.cabecalho .menu{
+    display: flex;
+    gap: 50px;
+}
+
+.cabecalho .menu li a{
+    padding: 30px;
+    color: #e8e8e8;
+    font-weight: bolder;
+    font-size: 15px;
+    font-family: "Nunito";
+    border-radius: 2cm;
+    transition-duration: 1s;
+}
+
+.cabecalho .menu li a:hover{
+    border-bottom: 1px solid #fff;
+    background:#fff;
+    color: black;
+}
+
+.home{
+    display: flex;
+    position: relative;
+    min-width: calc(100vh - 85px);
+}
+
+.home::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9108018207282913) 0%, rgba(0,0,0,0.7931547619047619) 17%, rgba(0,0,0,0) 62%);
+}
+
+.home .imagem-fundo{
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .informacoes{
+    position: absolute;
+    z-index: 1;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    padding: 150px 80px 80px 100px;
+    max-width: 780px;
+}
+
+.home .informacoes img{
+    max-width: 200px;
+}
+
+.home .informacoes .cruz-terco{
+    display: flex;
+    gap: 32px;
+}
+
+.home .informacoes .titulo{
+    font-family: 'Varela Round';
+    font-size: 40px;
+}
+
+.home .informacoes .btn-saiba{
+    background-color:  rgba(255, 255, 255, .1);
+    border-radius: 2cm;
+    float: left;
+    border: 1px solid rgb(255, 255, 255);
+    width: 30%;
+    text-align: center;
+    font-size: 25px;
+    transition-duration: 1s;
+    padding: 20px;
+    font-family:'Nunito';
+    cursor: pointer;
+}
+
+.home .informacoes .btn-saiba:hover{
+    background-color:#fff;
+    color: #000000;
+    border: 1px solid #000000;
+    box-shadow: 10px 10px rgb(75, 75, 75);
+    text-decoration: 2px black wavy underline;
+}
+
+.home .informacoes .btn-armar{
+    background-color:  rgba(255, 255, 255, .1);
+    border-radius: 2cm;
+    float: left;
+    border: 1px solid rgb(255, 255, 255);
+    width: 30%;
+    text-align: center;
+    font-size: 25px;
+    transition-duration: 1s;
+    padding: 20px;
+    font-family:'Nunito';
+    cursor: pointer;
+}
+
+.home .informacoes .btn-armar:hover{
+    background-color:#fff;
+    color: #000000;
+    border: 1px solid #000000;
+    box-shadow: 10px 10px rgb(75, 75, 75);
+    text-decoration: 2px black wavy underline;
+}
+
+.home .informacoes .btn{
+    display: flex;
+    position: relative;
+    gap: 20px;
+}
+
+.hist-gabriele .foto-gabriele{
+    width: 370px;
+    border-radius: 30px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.hist-gabriele{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    align-items: center;
+}
+
+.hist-gabriele .titulo{
+    font-family: 'Varela Round';
+    font-size: 50px;
+    font-weight: 700px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.hist-gabriele .cartao{
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    width: 65%;
+    border-radius: 20px;
+    padding: 80px;
+    gap: 50px;
+}
+
+.hist-gabriele .informacoes{
+    font-size: 20px;
+}
+
+.hist-gabriele .informacoes h3{
+    margin-bottom: 90px;
+    font-family: 'Varela Round';
+}
+
+.hist-gabriele .informacoes .bio-gabriele{
+    font-size: 20px;
+}
+
+.hist-gabriele .informacoes .bio-gabriele strong{ 
+    text-decoration:underline;
+    padding: 0 5px 0 0;
+}
+
+.hist-gabriele .btn-livros{
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    padding: 20px;
+    transition: all .3s ease-in;
+    font-family:'Nunito';
+    border: 1px solid rgb(255, 255, 255);
+    background-color:  rgba(255, 255, 255, .1);
+    color: #fff;
+}
+
+.hist-gabriele .btn-livros ul{
+    display: flex;
+    flex-direction: column ;
+    padding: 20px;
+}
+ 
+.hist-gabriele .btn-livros .livros{
+    gap: 5px;
+    display:none;
+    opacity:0;
+}
+
+.hist-gabriele .btn-livros .livros.ativo{
+    display: flex;
+    opacity: 1;
+}
+
+.hist-gabriele .btn-livros .livros li{
+    padding: 20px;
+}
+
+.hist-gabriele .btn-livros .livros li:nth-child(1){
+    border: 1px solid #0000FF;
+    transition-duration: 1s;
+}
+
+.hist-gabriele .btn-livros .livros li:nth-child(1):hover{
+    background-color: #0000FF;
+}
+
+.hist-gabriele .btn-livros .livros li:nth-child(2){
+    border: 1px solid #e47911;
+    transition-duration: 1s;
+}
+
+.hist-gabriele .btn-livros .livros li:nth-child(2):hover{
+    background-color: #e47911;
+}
+
+.hist-gabriele .btn-livros .livros li:nth-child(3){
+    border: 1px solid #fff ;
+    transition-duration: 1s;
+}
+
+.hist-gabriele .btn-livros .livros li:nth-child(3):hover{
+    background-color: #fff;
+    color:#000000
+}
+
+.hist-duarte .foto-duarte{
+    width: 370px;
+    border-radius: 30px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.hist-duarte{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    align-items: center;
+}
+
+.hist-duarte .titulo{
+    font-family: 'Varela Round';
+    font-size: 50px;
+    font-weight: 700px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.hist-duarte .cartao{
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    width: 65%;
+    border-radius: 20px;
+    padding: 80px;
+    gap: 50px;
+}
+
+.hist-duarte .informacoes{
+    font-size: 20px;
+}
+
+.hist-duarte .informacoes h3{
+    margin-bottom: 90px;
+    font-family: 'Varela Round';
+}
+
+.hist-duarte .informacoes {
+    font-size: 20px;
+}
+
+.hist-duarte .informacoes strong{ 
+    text-decoration:underline;
+    padding: 0 5px 0 0;
+}
+
+.hist-duarte .btn-livros{
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    padding: 20px;
+    transition: all .3s ease-in;
+    font-family:'Nunito';
+    border: 1px solid rgb(255, 255, 255);
+    background-color:  rgba(255, 255, 255, .1);
+    color: #fff;
+}
+
+.hist-duarte .btn-livros ul{
+    display: flex;
+    flex-direction: column ;
+    padding: 20px;
+}
+
+.hist-duarte .btn-livros .livros{
+    gap: 5px;
+    display: none;
+    opacity: 0;
+}
+
+.hist-duarte .btn-livros .livros.ativo{
+    display: flex;
+    opacity: 1;
+}
+
+.hist-duarte .btn-livros .livros li{
+    padding: 20px;
+}
+
+.hist-duarte .btn-livros .livros li:nth-child(1){
+    border: 1px solid #0000FF;
+    transition-duration: 1s;
+}
+
+.hist-duarte .btn-livros .livros li:nth-child(1):hover{
+    background-color: #0000FF;
+}
+
+.hist-duarte .btn-livros .livros li:nth-child(2){
+    border: 1px solid #FFD700;
+    transition-duration: 1s;
+}
+
+.hist-duarte .btn-livros .livros li:nth-child(2):hover{
+    background-color: #FFD700;
+    color: #000000;
+}
+
+.hist-duarte .btn-livros .livros li:nth-child(3){
+    border: 1px solid 	#FF0000 ;
+    transition-duration: 1s;
+}
+
+.hist-duarte .btn-livros .livros li:nth-child(3):hover{
+    background-color: 	#FF0000;
+    color:#000000
+}
+
+.exorcismus .cartao img{
+    width: 370px;
+    border-radius: 30px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.exorcismus{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    align-items: center;
+}
+
+.exorcismus h6{
+    font-family: 'Varela Round';
+    font-size: 50px;
+    font-weight: 700px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.exorcismus h7,h8{
+    font-family: 'Varela Round';
+    font-size: 30px;
+    font-weight: 700px;
+    text-align: center;
+    padding: 50px;
+    text-decoration: underline;
+}   
+
+.exorcismus .cartao {
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    width: 65%;
+    border-radius: 20px;
+    padding: 80px;
+    gap: 50px;
+}
+
+.exorcismus .informacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.exorcismus .informacoes p{
+    font-family:'Nunito';
+}
+
+.exorcismus .btn-img a{
+    background-color:  rgba(255, 255, 255, .1);
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+    transition-duration: 1s;
+    padding: 20px;
+    font-family:'Nunito';
+    cursor: pointer;
+}
+
+.exorcismus .btn-img a:hover{
+    background-color:  rgb(255, 255, 255);
+    color: #000000;
+}
